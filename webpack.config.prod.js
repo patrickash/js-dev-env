@@ -1,27 +1,20 @@
 import path from 'path';
-import webpack from 'webpack';
-
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
-const IS_DEVELOPMENT = process.env.NODE_ENV === "dev";
-
 export default {
-  mode: 'development',
-  devtool: 'eval-source-map',
+  mode: 'production',
+  devtool: 'source-map',
   entry: [
     './src/index.js'
   ],
   output: {
-    path: path.resolve(__dirname, 'src'),
+    path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
     filename: 'bundle.js'
   },
   plugins: [
-    new webpack.DefinePlugin({
-      IS_DEVELOPMENT
-    }),
-
     // Create HTML file that includes reference to bundled JS.
     new HtmlWebpackPlugin({
       template: "src/index.html"
