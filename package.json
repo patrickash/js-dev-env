@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "JavaScript development environment",
   "scripts": {
-    "prestart": "babel-node buildScripts/startMessage.mjs",
+    "prestart": "babel-node buildScripts/startMessage.js",
     "start": "npm-run-all --parallel open:src lint:watch test:watch",
     "open:src": "babel-node buildScripts/srcServer.js",
     "localtunnel": "lt --port 3000",
@@ -11,7 +11,8 @@
     "lint": "esw webpack.config.* src buildScripts --color",
     "lint:watch": "npm run lint -- --watch",
     "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\"",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "generate-mock-data": "babel-node buildScripts/generateMockData"
   },
   "repository": {
     "type": "git",
@@ -33,9 +34,10 @@
     "@babel/node": "^7.16.5",
     "@babel/preset-env": "^7.16.5",
     "@babel/register": "^7.16.5",
+    "axios": "^0.24.0",
     "babel-loader": "^8.2.3",
     "chai": "^4.3.4",
-    "chalk": "^5.0.0",
+    "chalk": "^4.1.0",
     "cheerio": "^1.0.0-rc.10",
     "clean-webpack-plugin": "^4.0.0",
     "compression": "^1.7.4",

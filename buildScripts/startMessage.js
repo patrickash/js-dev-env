@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-unresolved
 import chalk from 'chalk';
 
 // eslint-disable-next-line no-console
