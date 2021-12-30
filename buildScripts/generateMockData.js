@@ -7,12 +7,15 @@
  */
 import * as jsf from "json-schema-faker";
 import { schema } from "./mockDataSchema";
+import * as faker from "faker";
 import fs from "fs";
 import chalk from "chalk";
 
 // Extend JSF with the fake libs you want to use.
 // eslint-disable-next-line import/namespace
-jsf.extend("faker", () => require('faker'));
+jsf.extend("faker", () => {
+  return faker;
+});
 
 // eslint-disable-next-line import/namespace
 const json = JSON.stringify(jsf.generate(schema));
