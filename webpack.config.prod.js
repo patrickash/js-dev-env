@@ -1,6 +1,5 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 export default {
@@ -13,7 +12,7 @@ export default {
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
-    filename: '[name].js'
+    filename: '[name].[chunkhash].js'
   },
   plugins: [
     // Create HTML file that includes reference to bundled JS.
@@ -22,15 +21,14 @@ export default {
     }),
 
     new MiniCssExtractPlugin({
-      filename: "[name].css",
-      chunkFilename: "[id].css"
+      filename: "[name].[chunkhash].css"
     }),
   ],
   module: {
     rules: [
       {test: /\.m?js$/, exclude: /node_modules/, use: ['babel-loader']},
-      {test: /\.css$/i, use: ['style-loader','css-loader']},
-      {test: /\.s[ac]ss$/i, use: [MiniCssExtractPlugin.loader,'style-loader','css-loader','postcss-loader','sass-loader']}
+      {test: /\.css$/i, use: [MiniCssExtractPlugin.loader,'css-loader']},
+      {test: /\.s[ac]ss$/i, use: [MiniCssExtractPlugin.loader,'css-loader','postcss-loader','sass-loader']}
     ]
   }
 }
