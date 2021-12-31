@@ -1,0 +1,10 @@
+$fonts: sans-serif;
+$pad: 0.25rem;
+
+body {
+  font-family: $fonts;
+}
+
+table, th, td {
+  padding: $pad;
+}
