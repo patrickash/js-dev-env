@@ -1,7 +1,16 @@
+<!--
+  **NOTE:** This is a template for index.html.
+  It uses EJS and htmlWebpackPlugin to generate different index.html for each environment.
+-->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <% if (htmlWebpackPlugin.options.environment == 'production') { %>
+  <title>Production Env</title>
+  <% } else { %>
+  <title>Development Env</title>
+  <% } %>
 </head>
 <body>
   <h1>Users</h1>
