@@ -1,10 +1,7 @@
 import path from 'path';
 import webpack from 'webpack';
-
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-
-const IS_DEVELOPMENT = process.env.NODE_ENV === "dev";
 
 export default {
   mode: 'development',
@@ -19,9 +16,8 @@ export default {
   },
   plugins: [
     new webpack.DefinePlugin({
-      IS_DEVELOPMENT
+      ENV: 'development'
     }),
-
     // Create HTML file that includes reference to bundled JS.
     new HtmlWebpackPlugin({
       template: "src/index.html"
