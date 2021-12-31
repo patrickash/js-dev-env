@@ -1,7 +1,7 @@
 export default function getBaseUrl() {
   // const IS_DEVELOPMENT = window.location.hostname === "localhost";
   // return IS_DEVELOPMENT ? "http://localhost:3001/" : "/";
-  return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3001/' : '/';
+  return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3001/' : 'https://desolate-beach-26061.herokuapp.com/';
 }
 
 function getQueryStringParameterByName(name, url) {

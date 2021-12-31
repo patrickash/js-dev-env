@@ -18,9 +18,12 @@ export default {
     // Create HTML file that includes reference to bundled JS.
     new HtmlWebpackPlugin({
       template: "src/index.html",
-      environment: "production"
+      environment: "production",
+      meta: {
+        'viewport': 'width=device-width, initial-scale=1, shrink-to-fit=no',
+      }
     }),
-
+    // Create separate CSS file with cache-busting.
     new MiniCssExtractPlugin({
       filename: "[name].[chunkhash].css"
     }),
