@@ -1,5 +1,5 @@
 {
-  "name": "js-dev-environment",
+  "name": "js-dev-env",
   "version": "1.0.0",
   "description": "JavaScript development environment",
   "scripts": {
@@ -23,14 +23,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/patrickash/js-dev-environment.git"
+    "url": "git+https://github.com/patrickash/js-dev-env.git"
   },
   "author": "Patrick Ashamalla",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/patrickash/js-dev-environment/issues"
+    "url": "https://github.com/patrickash/js-dev-env/issues"
   },
-  "homepage": "https://github.com/patrickash/js-dev-environment#readme",
+  "homepage": "https://github.com/patrickash/js-dev-env#readme",
   "dependencies": {
     "whatwg-fetch": "^3.6.2"
   },
