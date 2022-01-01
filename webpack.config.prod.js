@@ -37,8 +37,17 @@ export default {
   ],
   module: {
     rules: [
-      {test: /\.m?js$/, exclude: /node_modules/, use: ['babel-loader']},
-      {test: /\.(sa|sc|c)ss$/i, use: [MiniCssExtractPlugin.loader,'css-loader','postcss-loader','sass-loader']}
+      // mjs, js
+      {
+        test: /\.m?js$/, 
+        exclude: /node_modules/, 
+        use: ['babel-loader']
+      },
+      // sass, scss, css
+      {
+        test: /\.(sa|sc|c)ss$/i, 
+        use: [MiniCssExtractPlugin.loader,'css-loader','postcss-loader','sass-loader']
+      }
     ]
   }
 }
