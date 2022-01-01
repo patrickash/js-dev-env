@@ -1,5 +1,8 @@
 import path from 'path';
 import webpack from 'webpack';
+
+// Load html-webpack-plugin before other plugins
+// @see https://github.com/jantimon/html-webpack-plugin#usage
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
