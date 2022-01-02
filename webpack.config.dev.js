@@ -35,13 +35,14 @@ export default {
     rules: [
       // mjs, js
       {
-        test: /\.m?js$/, 
-        exclude: /node_modules/, 
+        test: /\.m?js$/,
+        exclude: /node_modules/,
         use: ['babel-loader']
       },
       // sass, scss, css
       {
-        test: /\.(sa|sc|c)ss$/i, 
+        test: /\.(sa|sc|c)ss$/i,
+        exclude: /node_modules/,
         use: ['style-loader','css-loader','postcss-loader','sass-loader']
       }
     ]
