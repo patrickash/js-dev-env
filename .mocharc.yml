@@ -1,0 +1,5 @@
+extension: ['js', 'mjs']
+reporter: 'progress'
+require: '@babel/register'
+spec:
+  - 'src/**/*.test.js'
