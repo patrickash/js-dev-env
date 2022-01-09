@@ -47,3 +47,6 @@ dist
 
 #mock db
 db.json
+
+#environmant vars
+.env
