@@ -8,6 +8,7 @@
 import * as jsf from "json-schema-faker";
 import { schema } from "./mockDataSchema";
 import * as faker from "faker";
+// NodeJS file system
 import fs from "fs";
 import chalk from "chalk";
 
