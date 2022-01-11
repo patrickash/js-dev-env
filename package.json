@@ -35,12 +35,12 @@
     "whatwg-fetch": "^3.6.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.16.0",
+    "@babel/cli": "^7.16.8",
     "@babel/core": "^7.16.5",
     "@babel/eslint-parser": "^7.16.5",
-    "@babel/node": "^7.16.5",
-    "@babel/preset-env": "^7.16.5",
-    "@babel/register": "^7.16.5",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.8",
+    "@babel/register": "^7.16.8",
     "auto-bind": "^5.0.1",
     "axios": "^0.24.0",
     "babel-loader": "^8.2.3",
