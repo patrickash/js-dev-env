@@ -1,15 +1,15 @@
 {
-  "presets": ["@babel/preset-env"],
-  "env": {
-    "production": {
-      "presets": [
-        [
-          "@babel/preset-env",
-          {
-            "targets": "> 0.25%, not dead"
-          }
-        ]
-      ]
-    }
-  }
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage",
+        "corejs": "3.0.0"
+      }
+    ]
+  ],
+  "plugins": [
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-proposal-class-properties"
+  ]
 }
